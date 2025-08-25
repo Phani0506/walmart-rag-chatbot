@@ -1,5 +1,13 @@
 # vector_store_utils.py
 
+# --- FIX for Streamlit Deployment ---
+# This is a workaround for a known issue with chromadb and sqlite3 in cloud environments.
+# It forces Python to use the correct, statically-linked version of SQLite.
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# --- END FIX ---
+
 import os
 import chromadb
 from langchain_openai import OpenAIEmbeddings
