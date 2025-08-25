@@ -1,0 +1,8 @@
+pandas
+kagglehub
+langchain
+langchain-openai
+chromadb
+python-dotenv
+tiktoken
+streamlit
